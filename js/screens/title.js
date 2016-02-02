@@ -36,7 +36,11 @@ game.TitleScreen = me.ScreenObject.extend({
           scrollover : function() {
               // reset to default value
               this.scrollerpos = 640;
-              this.scrollertween.to({scrollerpos: -2200 }, 10000).onComplete(this.scrollover.bind(this)).start();
+              this.scrollertween.to(
+                {
+                  scrollerpos: -2200
+                }, 10000
+              ).onComplete(this.scrollover.bind(this)).start();
           },
 
           update : function (dt) {
